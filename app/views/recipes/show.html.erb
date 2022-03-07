@@ -1,0 +1,7 @@
+<div class="container p-3">
+  <h1>Ma recette</h1>
+  <% @recipes.each do |recipe| %>
+    <h3><%= recipe.name %></h3>
+    <h3><%= recipe.cost %></h3>
+  <% end %>
+</div>

@@ -17,7 +17,7 @@ class RecipesController < ApplicationController
     @recipe.user = current_user
     if @recipe.save
       ## must be changed to ingredient/new path
-      redirect_to recipes_path
+      redirect_to new_recipe_ingredient_path(@recipe)
     else
       render :new
     end

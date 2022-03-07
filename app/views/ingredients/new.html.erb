@@ -1,0 +1,13 @@
+<div class="container">
+  <%= simple_form_for [@recipe, @ingredient] do |f| %>
+    <%= f.input :ingredient_name %>
+    <%= f.input :amount_for_recipe %>
+    <%= f.input :unit_for_recipe %>
+    <%= f.input :amount_of_order %>
+    <%= f.input :unit_of_order %>
+    <%= f.input :cost_of_order %>
+
+    <%= f.button :button, 'Ingrédient suivant >', class: "btn-primary" %>
+    <%= link_to 'Recette terminée', recipe_path(@recipe), class: "btn-secondary" %>
+    <% end %>
+</div>
