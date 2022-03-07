@@ -1,0 +1,33 @@
+.navbar-resto {
+  justify-content: space-between;
+  background: gray;
+  height: 10vh;
+  width: 90vw;
+  margin-left: 5vw;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.navbar-resto .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-resto .navbar-brand img {
+  //width: 40px;
+}
+
+.navbar-brand {
+  color: white !important;
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: white !important;
+  &:hover {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+  }
+}
+
+.avatar {
+  margin-right: 1rem;
+}
