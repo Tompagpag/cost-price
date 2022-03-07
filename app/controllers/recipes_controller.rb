@@ -14,7 +14,9 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.user = current_user
     if @recipe.save
+      ## must be changed to ingredient/new path
       redirect_to recipes_path
     else
       render :new
