@@ -1,11 +1,11 @@
 class IngredientsController < ApplicationController
+  before_action :set_ingredient_recipe, only: [:new, :create]
+
   def new
-    @recipe = Recipe.find(params[:recipe_id])
     @ingredient = Ingredient.new
   end
 
   def create
-    @recipe = Recipe.find(params[:recipe_id])
     @ingredient = Ingredient.new(ingredient_params)
     @ingredient.recipe = @recipe
     if @ingredient.save
@@ -16,6 +16,10 @@ class IngredientsController < ApplicationController
   end
 
   private
+
+  def set_ingredient_recipe
+    @recipe = Recipe.find(params[:recipe_id])
+  end
 
   def ingredient_params
     params.require(:ingredient).permit(:ingredient_name, :amount_for_recipe,
