@@ -8,8 +8,10 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = Ingredient.new(ingredient_params)
     @ingredient.recipe = @recipe
-    if @ingredient.save
+    if @ingredient.save && params[:commit] == "Ingrédient suivant >"
       redirect_to new_recipe_ingredient_path(@recipe)
+    elsif @ingredient.save && params[:commit] == "Terminer la recette"
+      redirect_to recipe_path(@recipe)
     else
       render :new
     end
