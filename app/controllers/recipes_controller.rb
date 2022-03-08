@@ -15,6 +15,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user = current_user
+    @recipe.name.capitalize!
     if @recipe.save
       redirect_to new_recipe_ingredient_path(@recipe)
     else
