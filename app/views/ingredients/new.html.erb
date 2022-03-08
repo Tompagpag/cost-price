@@ -1,9 +1,9 @@
 <div class="container">
   <%= simple_form_for [@recipe, @ingredient] do |f| %>
-    <%= f.input :ingredient_name %>
-    <%= f.input :amount_for_recipe %>
+    <%= f.input :ingredient_name, label: "Nom de l'ingrédient" %>
+    <%= f.input :amount_for_recipe, label: "Quantité utilisée dans la recette" %>
 
-    <%= f.input :unit_for_recipe,
+    <%= f.input :unit_for_recipe, label: "Unité",
             as: :radio_buttons,
             collection_wrapper_tag: 'div',
             collection_wrapper_class: 'category-wrapper',
@@ -11,9 +11,9 @@
             input_html: {class: 'category-selector'},
             collection: Ingredient::UNITS %>
 
-    <%= f.input :amount_of_order %>
+    <%= f.input :amount_of_order, label: "Quantité commandée" %>
 
-    <%= f.input :unit_of_order,
+    <%= f.input :unit_of_order, label: "Unité",
             as: :radio_buttons,
             collection_wrapper_tag: 'div',
             collection_wrapper_class: 'category-wrapper',
@@ -21,9 +21,9 @@
             input_html: {class: 'category-selector'},
             collection: Ingredient::UNITS %>
 
-    <%= f.input :cost_of_order %>
+    <%= f.input :cost_of_order, label: "Coût de la commande" %>
 
-    <%= f.button :button, 'Ingrédient suivant >', class: "btn-primary" %>
-    <%= link_to 'Recette terminée', recipe_path(@recipe), class: "btn-secondary" %>
+    <%= f.button :submit, 'Ingrédient suivant >', class: "btn-primary" %>
+    <%= f.button :submit, 'Terminer la recette', class: "btn-danger" %>
     <% end %>
 </div>
