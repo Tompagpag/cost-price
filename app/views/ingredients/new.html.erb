@@ -2,9 +2,25 @@
   <%= simple_form_for [@recipe, @ingredient] do |f| %>
     <%= f.input :ingredient_name %>
     <%= f.input :amount_for_recipe %>
-    <%= f.input :unit_for_recipe %>
+
+    <%= f.input :unit_for_recipe,
+            as: :radio_buttons,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            input_html: {class: 'category-selector'},
+            collection: Ingredient::UNITS %>
+
     <%= f.input :amount_of_order %>
-    <%= f.input :unit_of_order %>
+
+    <%= f.input :unit_of_order,
+            as: :radio_buttons,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            input_html: {class: 'category-selector'},
+            collection: Ingredient::UNITS %>
+
     <%= f.input :cost_of_order %>
 
     <%= f.button :button, 'Ingrédient suivant >', class: "btn-primary" %>

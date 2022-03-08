@@ -3,4 +3,6 @@ class Ingredient < ApplicationRecord
 
   validates :ingredient_name, :amount_for_recipe, :unit_for_recipe,
             :amount_of_order, :cost_of_order, :unit_of_order, presence: true
+
+  UNITS = ["Gramme", "Kilogramme", "Centilitre", "Litre"]
 end
