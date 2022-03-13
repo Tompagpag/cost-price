@@ -69,3 +69,42 @@
   background-color: #62f593;
   border-color: #62f593;
 }
+
+#ingredient_unit_of_order_gramme + label {
+  color: #FD1015;
+}
+
+#ingredient_unit_of_order_gramme:checked + label {
+  background-color: #FD1015;
+  border-color: #FD1015;
+}
+
+
+#ingredient_unit_of_order_kilogramme + label {
+  color: #FFC65A;
+}
+
+#ingredient_unit_of_order_kilogramme:checked + label {
+  background-color: #FFC65A;
+  border-color: #FFC65A;
+}
+
+
+#ingredient_unit_of_order_centilitre + label {
+  color: #62DDF5;
+}
+
+#ingredient_unit_of_order_centilitre:checked + label {
+  background-color: #62DDF5;
+  border-color: #62DDF5;
+}
+
+
+#ingredient_unit_of_order_litre + label {
+  color: #62f593;
+}
+
+#ingredient_unit_of_order_litre:checked + label {
+  background-color: #62f593;
+  border-color: #62f593;
+}
