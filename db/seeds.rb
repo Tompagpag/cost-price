@@ -6,11 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
 Recipe.destroy_all
+puts "Destroy all Recipes"
 Ingredient.destroy_all
+puts "Destroy all Ingredients"
+User.destroy_all
+puts "Destroy all Users"
 
 password = "123456"
 
 User.create(email: "t@g.com", password: password)
 User.create(email: "b@g.com", password: password)
+puts "Create two users : #{User.first.email} and #{User.last.email}"

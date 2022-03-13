@@ -1,7 +1,12 @@
 <div class="container">
-  <div class="row">
-    <%= simple_form_for [@recipe, @ingredient] do |f| %>
-      <div class="col-md-3">
+  <h3>
+    <%= @recipe.ingredients.count == 0 ? "1er" : "#{@recipe.ingredients.count + 1}ème" %>
+    Ingrédient
+  </h3>
+  <%= simple_form_for [@recipe, @ingredient] do |f| %>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
         <%= f.input :ingredient_name, label: "Nom de l'ingrédient" %>
         <%= f.input :amount_for_recipe, label: "Quantité utilisée dans la recette" %>
 
@@ -13,7 +18,7 @@
                 input_html: {class: 'category-selector'},
                 collection: Ingredient::UNITS %>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-5">
         <%= f.input :amount_of_order, label: "Quantité commandée" %>
 
         <%= f.input :unit_of_order, label: "Unité",
