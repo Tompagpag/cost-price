@@ -7,15 +7,20 @@
       <div class="col-md-1"></div>
       <div class="col-md-5">
         <%= f.input :ingredient_name, label: "Nom de l'ingrédient" %>
-        <%= f.input :amount_for_recipe, label: "Quantité utilisée dans la recette" %>
-
-        <%= f.input :unit_for_recipe, label: "Unité",
-                as: :radio_buttons,
-                collection_wrapper_tag: 'div',
-                collection_wrapper_class: 'category-wrapper',
-                item_wrapper_class: 'category-item',
-                input_html: {class: 'category-selector'},
-                collection: Ingredient::UNITS %>
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.input :amount_for_recipe, label: "Quantité utilisée dans la recette" %>
+          </div>
+          <div class="col-md-8">
+            <%= f.input :unit_for_recipe, label: "Unité",
+                  as: :radio_buttons,
+                  collection_wrapper_tag: 'div',
+                  collection_wrapper_class: 'category-wrapper',
+                  item_wrapper_class: 'category-item',
+                  input_html: {class: 'category-selector'},
+                  collection: Ingredient::UNITS %>
+          </div>
+        </div>
       </div>
       <div class="col-md-5">
         <%= f.input :amount_of_order, label: "Quantité commandée" %>
