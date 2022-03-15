@@ -15,17 +15,17 @@
 
 .navbar-brand {
   color: black !important;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 
 .nav-link {
   color: black !important;
   &:hover {
-    font-weight: bold;
+    // font-weight: bold;
     border-bottom: 2px solid black;
   }
 }
 
 .avatar {
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
