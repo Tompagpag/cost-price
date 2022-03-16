@@ -12,7 +12,6 @@ class IngredientsController < ApplicationController
       @ingredient.set_cost_for_recipe
       redirect_to new_recipe_ingredient_path(@recipe)
     elsif @ingredient.save && recipe_finished?
-      @ingredient.set_cost_for_recipe
       @recipe.set_total_cost
       redirect_to recipe_path(@recipe)
     else
