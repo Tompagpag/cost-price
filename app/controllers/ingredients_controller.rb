@@ -1,12 +1,12 @@
 class IngredientsController < ApplicationController
   before_action :set_ingredient_recipe, only: [:new, :create]
+  before_action :set_ingredient, only: [:create]
 
   def new
     @ingredient = Ingredient.new
   end
 
   def create
-    @ingredient = Ingredient.new(ingredient_params)
     @ingredient.recipe = @recipe
     if @ingredient.save && new_ingredient?
       @ingredient.set_cost_for_recipe
@@ -28,6 +28,10 @@ class IngredientsController < ApplicationController
 
   def recipe_finished?
     params[:commit] == "Terminer la recette"
+  end
+
+  def set_ingredient
+    @ingredient = Ingredient.new(ingredient_params)
   end
 
   def set_ingredient_recipe
