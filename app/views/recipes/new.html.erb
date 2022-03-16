@@ -1,8 +1,8 @@
 <div class="container p-5">
-  <h1>Nouvelle recette</h1>
+  <h1 class="pb-3">Nouvelle recette</h1>
   <div class="flex">
     <%= simple_form_for(@recipe) do |f| %>
-      <%= f.input :name, label: "Nom de la recette" %>
+      <%= f.input :name, label: "Nom de la recette", class:"pb-3" %>
       <%= f.button :submit, class:"main-button" %>
     <% end %>
   </div>
