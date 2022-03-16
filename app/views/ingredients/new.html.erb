@@ -8,7 +8,7 @@
       </div>
   </div>
   <%= simple_form_for [@recipe, @ingredient] do |f| %>
-    <div class="row">
+    <div class="row pb-3">
       <div class="col-md-1"></div>
       <div class="col-md-5">
         <%= f.input :ingredient_name, label: "Nom de l'ingrédient" %>
@@ -36,7 +36,15 @@
         <%= f.input :cost_of_order, label: "Coût de la commande" %>
       </div>
     </div>
-      <%= f.button :submit, 'Ingrédient suivant >', class: "main-button" %>
-      <%= f.button :submit, 'Terminer la recette', class: "btn-danger" %>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+          <%= f.button :submit, 'Ingrédient suivant >', class: "main-button" %>
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">
+          <%= f.button :submit, 'Terminer la recette', class: "main-button" %>
+        </div>
+      </div>
       <% end %>
 </div>

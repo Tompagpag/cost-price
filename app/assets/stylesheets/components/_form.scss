@@ -4,3 +4,8 @@
   border-radius: 10px;
   box-shadow: none !important;
 }
+
+.invalid-feedback {
+  position: absolute;
+  transform: scale(0);
+}
