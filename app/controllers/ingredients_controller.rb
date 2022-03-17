@@ -8,8 +8,8 @@ class IngredientsController < ApplicationController
 
   def create
     @ingredient.recipe = @recipe
+    @ingredient.set_cost_for_recipe
     if @ingredient.save && new_ingredient?
-      @ingredient.set_cost_for_recipe
       redirect_to new_recipe_ingredient_path(@recipe)
     elsif @ingredient.save && recipe_finished?
       @recipe.set_total_cost
