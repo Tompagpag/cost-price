@@ -43,7 +43,7 @@
         </div>
         <div class="col-md-6"></div>
         <div class="col-md-2">
-          <%= f.button :submit, 'Terminer la recette', class: "main-button" %>
+          <%= f.button :submit, 'Terminer la recette', class: "main-button" if @recipe.ingredients.count > 0 %>
         </div>
       </div>
       <% end %>
