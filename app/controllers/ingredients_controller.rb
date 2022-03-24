@@ -9,6 +9,7 @@ class IngredientsController < ApplicationController
   def create
     @ingredient.recipe = @recipe
     @ingredient.set_cost_for_recipe
+    raise
     if @ingredient.save && new_ingredient?
       redirect_to new_recipe_ingredient_path(@recipe)
     elsif @ingredient.save && recipe_finished?
