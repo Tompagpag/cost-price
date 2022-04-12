@@ -12,8 +12,6 @@ let unitOfOrderLitre = document.getElementById("ingredient_unit_of_order_litre")
 // Listen to the unit for recipe click
 
 unitForRecipeGramme.addEventListener('click', () => {
-
-
   unitOfOrderCentL.toggleAttribute("disabled");
   unitOfOrderLitre.toggleAttribute("disabled");
 })
