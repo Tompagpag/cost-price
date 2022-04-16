@@ -10,7 +10,7 @@
   <%= simple_form_for [@recipe, @ingredient] do |f| %>
     <div class="row pb-3">
       <div class="col-md-1"></div>
-      <div class="col-md-5">
+      <div class="col-md-5 form-two-part">
         <%= f.input :ingredient_name, label: "Nom de l'ingrédient" %>
         <%= f.input :amount_for_recipe, label: "Quantité utilisée dans la recette" %>
 
@@ -23,7 +23,7 @@
                   collection: Ingredient::UNITS %>
 
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 form-two-part">
         <%= f.input :amount_of_order, label: "Quantité commandée" %>
         <%= f.input :unit_of_order, label: "Unité",
                 as: :radio_buttons,
