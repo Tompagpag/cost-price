@@ -23,3 +23,16 @@ unitForRecipeKilo.addEventListener('click', () => {
     unitOfOrderLitre.toggleAttribute("disabled");
   }
 })
+
+unitForRecipeCentL.addEventListener('click', () => {
+  if (unitOfOrderGramme.attributes.disabled === undefined) {
+    unitOfOrderGramme.toggleAttribute("disabled");
+    unitOfOrderKilo.toggleAttribute("disabled");
+  }
+})
+unitForRecipeLitre.addEventListener('click', () => {
+  if (unitOfOrderGramme.attributes.disabled === undefined) {
+    unitOfOrderGramme.toggleAttribute("disabled");
+    unitOfOrderKilo.toggleAttribute("disabled");
+  }
+})
