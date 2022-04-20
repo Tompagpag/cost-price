@@ -13,26 +13,36 @@ let unitOfOrderLitre = document.getElementById("ingredient_unit_of_order_litre")
 
 unitForRecipeGramme.addEventListener('click', () => {
   if (unitOfOrderCentL.attributes.disabled === undefined) {
-    unitOfOrderCentL.toggleAttribute("disabled");
-    unitOfOrderLitre.toggleAttribute("disabled");
+    toggleLitreAndCentL();
   }
 })
 unitForRecipeKilo.addEventListener('click', () => {
   if (unitOfOrderCentL.attributes.disabled === undefined) {
-    unitOfOrderCentL.toggleAttribute("disabled");
-    unitOfOrderLitre.toggleAttribute("disabled");
+    toggleLitreAndCentL();
   }
 })
 
 unitForRecipeCentL.addEventListener('click', () => {
   if (unitOfOrderGramme.attributes.disabled === undefined) {
-    unitOfOrderGramme.toggleAttribute("disabled");
-    unitOfOrderKilo.toggleAttribute("disabled");
+    toggleKiloAndGramme();
   }
 })
 unitForRecipeLitre.addEventListener('click', () => {
   if (unitOfOrderGramme.attributes.disabled === undefined) {
-    unitOfOrderGramme.toggleAttribute("disabled");
-    unitOfOrderKilo.toggleAttribute("disabled");
+    toggleKiloAndGramme();
   }
 })
+
+let toggleLitreAndCentL = () => {
+  unitOfOrderCentL.setAttribute("disabled", true);
+  unitOfOrderLitre.setAttribute("disabled", true);
+  unitOfOrderGramme.removeAttribute("disabled");
+  unitOfOrderKilo.removeAttribute("disabled");
+}
+
+let toggleKiloAndGramme = () => {
+  unitOfOrderGramme.setAttribute("disabled", true);
+  unitOfOrderKilo.setAttribute("disabled", true);
+  unitOfOrderCentL.removeAttribute("disabled");
+  unitOfOrderLitre.removeAttribute("disabled");
+}
