@@ -1,7 +1,14 @@
 <div class="container p-5">
   <h1><%= @recipe.name %></h1>
-    <%  %>
+
   <% @recipe.ingredients.each do |ingredient| %>
-    <p>- <%= ingredient.ingredient_name %></p>
+    <p>-
+      <%= ingredient.ingredient_name %>
+      <%= ingredient.cost_for_recipe %>
+      <%= ingredient.amount_for_recipe %>
+      <%= ingredient.unit_for_recipe %>
+    </p>
   <% end %>
+  <br>
+  <h3><%= @recipe.total_cost %> €</h3>
 </div>
