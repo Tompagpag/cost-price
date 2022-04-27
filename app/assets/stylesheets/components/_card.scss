@@ -8,6 +8,10 @@
   margin-bottom: 1rem;
   border-radius: 4px;
   width: 30rem;
+  transition: margin-top 500ms;
+  &:hover {
+    margin-top: -10px;
+  }
 }
 
 .card-product img {
