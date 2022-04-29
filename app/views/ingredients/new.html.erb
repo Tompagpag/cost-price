@@ -1,7 +1,6 @@
 <div class="container p-5">
   <div class="row pb-3">
-      <div class="col-md-1"></div>
-      <div class="col-md-5">
+      <div class="col-md-5 offset-md-1">
         <h1>
           <%= @recipe.ingredients.count == 0 ? "1er" : "#{@recipe.ingredients.count + 1}ème" %> Ingrédient
         </h1>
@@ -9,8 +8,7 @@
   </div>
   <%= simple_form_for [@recipe, @ingredient] do |f| %>
     <div class="row pb-3">
-      <div class="col-md-1"></div>
-      <div class="col-md-5 form-two-part">
+      <div class="col-md-5 offset-md-1 form-two-part">
         <%= f.input :ingredient_name, label: "Nom de l'ingrédient" %>
         <%= f.input :amount_for_recipe, label: "Quantité utilisée dans la recette" %>
 
@@ -37,12 +35,10 @@
       </div>
     </div>
       <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-2">
+        <div class="col-md-2 offset-md-1">
           <%= f.button :submit, 'Ingrédient suivant >', class: "main-button" %>
         </div>
-        <div class="col-md-6"></div>
-        <div class="col-md-2">
+        <div class="col-md-2 offset-md-6">
           <%= f.button :submit, 'Terminer la recette', class: "main-button" if @recipe.ingredients.count > 0 %>
         </div>
       </div>
