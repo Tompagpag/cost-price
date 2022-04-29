@@ -3,12 +3,13 @@
   <div class="row justify-content-around">
     <% @recipes.each do |recipe| %>
       <div class="card-product">
-        <%= image_tag "cooking.jpg" %>
-        <div class="card-product-infos">
-          <h3><%= link_to recipe.name, recipe_path(recipe) %></h3>
-          <p><%= recipe.ingredients.count %> Ingrédients</p>
-          <p>Coût : <strong><%= recipe.total_cost.truncate(2) if recipe.total_cost %></strong> €</p>
-        </div>
+        <%= link_to recipe_path(recipe) do %>
+          <div class="card-product-infos">
+            <h3><%= recipe.name %></h3>
+            <p><%= recipe.ingredients.count %> Ingrédients</p>
+            <p>Coût : <strong><%= recipe.total_cost.truncate(2) if recipe.total_cost %></strong> €</p>
+          </div>
+          <% end %>
       </div>
     <% end %>
   </div>

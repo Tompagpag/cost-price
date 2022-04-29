@@ -1,13 +1,14 @@
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 15rem;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  flex: 1 0 25%;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: 1rem;
   border-radius: 4px;
-  width: 30rem;
+  width: 15rem;
   transition: margin-top 500ms;
   &:hover {
     margin-top: -10px;
