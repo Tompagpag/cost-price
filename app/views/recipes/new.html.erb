@@ -2,8 +2,8 @@
   <h1 class="pb-3">Nouvelle recette</h1>
   <div class="flex">
     <%= simple_form_for(@recipe) do |f| %>
-      <%= f.input :name, label: "Nom de la recette", class:"pb-3" %>
-      <%= f.button :submit, class:"main-button" %>
+      <%= f.input :name, label: "Nom de la recette" %>
+      <%= f.button :submit, 'Créer la recette', class:"main-button" %>
     <% end %>
   </div>
 </div>
