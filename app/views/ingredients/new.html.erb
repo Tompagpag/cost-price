@@ -9,7 +9,7 @@
   <%= simple_form_for [@recipe, @ingredient] do |f| %>
     <div class="row pb-3">
       <div class="col-md-5 offset-md-1 form-two-part">
-        <%= f.input :ingredient_name, label: "Nom de l'ingrédient" %>
+        <%= f.input :ingredient_name, label: "Nom de l'ingrédient", placeholder: "Oignons de Roscoff" %>
         <%= f.input :amount_for_recipe, label: "Quantité utilisée dans la recette" %>
 
         <%= f.input :unit_for_recipe, label: "Unité",
